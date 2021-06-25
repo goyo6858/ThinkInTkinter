@@ -1,0 +1,15 @@
+from tkinter import *
+
+class MyApp:
+  def __init__(self, master):
+    self.frm1=Frame(master)
+    self.frm1.pack()
+    self.btn1=Button(master,text='OK',background='Green')
+    self.btn1.pack()
+ 
+root=Tk()
+main1=MyApp(root)
+mainloop()
+    
+    
+    
