@@ -1,0 +1,22 @@
+class MyApp:
+  def __init__(self, master):
+    self.frm1=Frame(master)
+    self.frm1.pack()
+    
+    self.btn1=Button(self.frm1,text='Hello',background='Green')
+    self.btn1.pack()
+    
+    self.btn2=Button(self.frm1)
+    self.btn2.configure(text='OK',background='Tan')
+    self.btn2.pack()
+    
+    self.btn3=Button(self.frm1,text='Join',background='Cyan')
+    self.btn3.pack()
+    
+    self.btn4=Button(self.frm1,text='Exit',background='Red')
+    self.btn4.pack()
+
+from tkinter import *
+root=Tk()
+main=MyApp(root)
+mainloop()
