@@ -1,0 +1,14 @@
+class MyApp:
+  def __init__(self,master):
+    self.frm1=Frame(master)
+    self.frm1.pack()
+    
+    self.btn1=Button(text='Hello').pack(side=LEFT)
+    self.btn2=Button(text='OK').pack(side=LEFT)
+    self.btn3=Button(text='Join').pack(side=LEFT)
+    self.btn4=Button(text='Exit').pack(side=LEFT)
+    
+from tkinter import *
+root=Tk()
+main=MyApp(root)
+mainloop()
