@@ -1,0 +1,5 @@
+from tkinter import *
+root=Tk()
+frm1=Frame(root)
+frm1.pack()
+mainloop
