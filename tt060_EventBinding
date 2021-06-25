@@ -1,0 +1,29 @@
+class MyApp:
+  def __init__(self,master):
+    self.master=master
+    self.frm1=Frame(master)
+    self.frm1.pack()
+    
+    self.btn1=Button(self.frm1,text='OK',background='Green')
+    self.btn1.bind('<Button-1>',self.OkClick)
+    self.btn1.pack(side=LEFT)
+    
+    self.btn2=Button(self.frm1,text='Cancel')
+    self.btn2.bind('<Button-1>',self.CancelClick)
+    self.btn2.pack(side=LEFT)
+
+  def OkClick(self,event): #注意self, event
+    if self.btn1['background']=='Green': #[]
+      self.btn1.configure(background='Yellow')
+    else:
+      self.btn1.configure(background='Green')
+    
+  def CancelClick(self,event):
+    self.master.destroy() #self, ()
+  
+from tkinter import *
+root=Tk()
+main=MyApp(root)
+mainloop()
+    
+   
