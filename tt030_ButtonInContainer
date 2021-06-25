@@ -1,0 +1,11 @@
+from tkinter import *
+
+root=Tk()
+
+frm1=Frame(root)
+frm1.pack()
+
+btn1=Button(frm1,text='OK',background='Green')
+btn1.pack()
+
+mainloop()
