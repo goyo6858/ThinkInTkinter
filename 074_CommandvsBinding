@@ -1,0 +1,32 @@
+#使用Command方法可以不用向函数传递事件作为参数
+
+class MyApp:
+  
+  def __init__(self,master):
+  
+    self.master=master
+    
+    self.frm1=Frame(master)
+    self.frm1.pack()
+    
+    self.btn1=Button(self.frm1,text='OK',background='Green',command=self.OkClick)
+    self.btn1.pack(side=LEFT)
+    
+    self.btn2=Button(self.frm1,text='Cancel',background='red',command=self.CancelClick)
+    self.btn2.pack()
+    
+  def OkClick(self):
+    print('Button1 event handler')
+    if self.btn1['background']=='Green':
+      self.btn1['background']='Yellow'
+    else:
+      self.btn1['background']='Green'
+        
+  def CancelClick(self):
+    print('Button2 event handler')
+    self.master.destroy()
+      
+from tkinter import *
+root=Tk()
+main=MyApp(root)
+mainloop()
